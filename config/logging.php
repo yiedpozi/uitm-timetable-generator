@@ -127,6 +127,18 @@ return [
             'path' => storage_path('logs/laravel.log'),
         ],
 
+        'uitm_timetable' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/uitm-timetable.log'),
+            'days' => 500,
+        ],
+
+        'uitm_timetable_icress_api' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/icress/icress-api.log'),
+            'days' => 500,
+        ],
+
     ],
 
 ];
