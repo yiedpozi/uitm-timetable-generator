@@ -26,20 +26,20 @@ class IcressAPI extends IcressClient
         ]);
     }
 
-    // Get subjects code and URL for specified campus and faculty
-    public function getSubjects($campus, $faculty = null)
+    // Get course codes and URL for specified campus and faculty
+    public function getCourses($campusId, $facultyId = null)
     {
         $this->setHeader('Referer', config('uitmtimetable.icress_referer_url'));
 
         return $this->post('index_result.cfm', [
-            'search_campus'  => $campus,
-            'search_faculty' => $faculty,
+            'search_campus'  => $campusId,
+            'search_faculty' => $facultyId,
             'search_course'  => '',
         ]);
     }
 
-    // Get subject timetable
-    public function getTimetable($id1, $id2)
+    // Get the timetable for specified course
+    public function getCourseTimetable($id1, $id2)
     {
         return $this->get('index_tt.cfm', [
             'id1' => $id1,

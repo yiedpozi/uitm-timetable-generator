@@ -4,10 +4,17 @@
     "description": "The skeleton application for the Laravel framework.",
     "keywords": ["laravel", "framework"],
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/yiedpozi/php-telegram-bot-laravel"
+        }
+    ],
     "require": {
         "php": "^8.2",
         "laravel/framework": "^11.9",
-        "laravel/tinker": "^2.9"
+        "laravel/tinker": "^2.9",
+        "php-telegram-bot/laravel": "dev-laravel-11-support"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.13",
